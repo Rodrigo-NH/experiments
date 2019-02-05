@@ -1,6 +1,10 @@
 Results:
-Interesting behavior using Python 2 and Python 3 under different conditions.
-The significative test is the last one (Python 3.6 with 'lockcontrol=True') where all rounds returned consistent results.
+Interesting behavior using Python 2 and Python 3 under different conditions.  
+The significative test is the last one (Python 3.6 with 'lockcontrol=True') where all rounds returned consistent results.  
+
+EDIT: Despite the results for test 'Python 3.6 with 'lockcontrol=True' that's still unsafe. After searching for the subject (threading), and python's "Global Interpreter Lock" and accordingly some instruction in Freenode's #python channel it seems that the satisfactory result from the last test cannot be guaranteed for different situations, for any python version.  
+If the objective is achieve thread safe operations and secure access of shared data/objects it's necessary to use python specific locking resources. The same example (but using thread locks) is exemplified in threadingspree2.py archive.
+Reference: http://effbot.org/zone/thread-synchronization.htm  
 
 
 * Python 2.7 with variable 'lockcontrol = False'. 1000 threads fired in each round.
