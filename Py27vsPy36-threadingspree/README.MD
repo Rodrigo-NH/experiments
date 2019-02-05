@@ -1,0 +1,99 @@
+Results:
+Interesting behavior using Python 2 and Python 3 under different conditions.
+The significative test is the last one (Python 3.6 with 'lockcontrol=True') where all rounds returned consistent results.
+
+
+* Python 2.7 with variable 'lockcontrol = False'. 1000 threads fired in each round.
+
+round 1:
+[0, 0] = 270 | [1, 0] = 242 | [0, 1] = 264 | [1, 1] = 224
+Total processed: 1000
+
+round 2:
+[0, 0] = 237 | [1, 0] = 265 | [0, 1] = 255 | [1, 1] = 242
+Total processed: 999
+
+round 3:
+[0, 0] = 246 | [1, 0] = 247 | [0, 1] = 235 | [1, 1] = 273
+Total processed: 1001
+
+round 4:
+[0, 0] = 253 | [1, 0] = 240 | [0, 1] = 265 | [1, 1] = 236
+Total processed: 994
+
+round 5:
+[0, 0] = 244 | [1, 0] = 237 | [0, 1] = 255 | [1, 1] = 261
+Total processed: 997
+
+
+* Python 2.7 with variable 'lockcontrol = True'. 1000 threads fired in each round.
+
+round 1:
+[0, 0] = 64 | [1, 0] = 436 | [0, 1] = 436 | [1, 1] = 64
+Total processed: 1000
+
+round 2:
+[0, 0] = 204 | [1, 0] = 296 | [0, 1] = 300 | [1, 1] = 201
+Total processed: 1001
+
+round 3:
+[0, 0] = 345 | [1, 0] = 156 | [0, 1] = 150 | [1, 1] = 349
+Total processed: 1000
+
+round 4:
+[0, 0] = 159 | [1, 0] = 341 | [0, 1] = 340 | [1, 1] = 160
+Total processed: 1000
+
+round 5:
+[0, 0] = 215 | [1, 0] = 285 | [0, 1] = 286 | [1, 1] = 214
+Total processed: 1000
+
+
+* Python 3.6 with variable 'lockcontrol = False'. 1000 threads fired in each round.
+
+round 1:
+[0, 0] = 179 | [1, 0] = 291 | [0, 1] = 200 | [1, 1] = 330
+Total processed: 1000
+
+round 2:
+[0, 0] = 282 | [1, 0] = 217 | [0, 1] = 273 | [1, 1] = 228
+Total processed: 1000
+
+round 3:
+[0, 0] = 200 | [1, 0] = 262 | [0, 1] = 224 | [1, 1] = 314
+Total processed: 1000
+
+round 4:
+[0, 0] = 205 | [1, 0] = 276 | [0, 1] = 206 | [1, 1] = 313
+Total processed: 1000
+
+round 5:
+[0, 0] = 226 | [1, 0] = 271 | [0, 1] = 211 | [1, 1] = 292
+Total processed: 1000
+
+
+* Python 3.6 with variable 'lockcontrol = True'. 1000 threads fired in each round.
+
+round 1:
+[0, 0] = 500 | [1, 0] = 0 | [0, 1] = 0 | [1, 1] = 500
+Total processed: 1000
+
+round 2:
+[0, 0] = 500 | [1, 0] = 0 | [0, 1] = 0 | [1, 1] = 500
+Total processed: 1000
+
+round 3:
+[0, 0] = 500 | [1, 0] = 0 | [0, 1] = 0 | [1, 1] = 500
+Total processed: 1000
+
+round 4:
+[0, 0] = 500 | [1, 0] = 0 | [0, 1] = 0 | [1, 1] = 500
+Total processed: 1000
+
+round 5:
+[0, 0] = 500 | [1, 0] = 0 | [0, 1] = 0 | [1, 1] = 500
+Total processed: 1000
+
+
+
+
